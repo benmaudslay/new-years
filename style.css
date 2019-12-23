@@ -1,0 +1,246 @@
+@font-face {
+  font-family: gilroyLight;
+  src: url(./fonts/gilroy-light.otf);
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url(./fonts/gilroy-bold.otf);
+}
+
+body {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+  max-width: 800px;
+  width: auto;
+  display: grid;
+  grid-template-areas: "header" "body" "footer";
+  grid-template-rows: minmax(200px, auto) 1fr minmax(150px, auto);
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+header {
+  grid-area: header;
+
+  color: #fff;
+  font-family: gilroyBold;
+  font-size: 46pt;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  grid-area: footer;
+  color: #fff;
+  font-family: gilroyLight;
+  font-size: 28pt;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  height: 50px;
+}
+
+.sky {
+  grid-area: body;
+  background-color: black;
+}
+
+/* Firework */
+.rocket {
+  position: relative;
+  top: 20%;
+  left: 20%;
+
+  display: grid;
+  grid-template-areas:
+    ". . ."
+    ". center ."
+    ". . .";
+
+  grid-template-columns: 60px 15px 60px;
+  grid-template-rows: 60px 15px 60px;
+}
+
+.rocket .firework {
+  opacity: 0;
+}
+
+.rocket1 {
+  top: 30%;
+  left: 30%;
+  transform: scale(0.5);
+}
+
+.rocket2 {
+  top: -5%;
+  left: 10%;
+}
+
+.rocket3 {
+  top: -40%;
+  left: 45%;
+  transform: scale(1.2);
+}
+
+.rocket4 {
+  top: -50%;
+  left: 60%;
+}
+
+.rocket1 .firework {
+  background-color: #2d4d95;
+  animation-delay: 1s;
+}
+
+.rocket2 .firework {
+  background-color: #2d4d95;
+  animation-delay: 0.3s;
+}
+
+.rocket3 .firework {
+  background-color: #ecb54c;
+}
+
+.rocket4 .firework {
+  background-color: #ecb54c;
+  animation-delay: 0.2s;
+}
+
+.firework {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.center {
+  justify-self: center;
+  grid-area: center;
+  background-color: black;
+  animation: visibility 1.5s infinite;
+}
+
+.piece1 {
+  position: relative;
+  top: 45px;
+  left: 45px;
+  animation: move1 1.5s infinite ease-out, visibility 1.5s infinite;
+}
+
+.piece2 {
+  position: relative;
+  top: 45px;
+  animation: move2 1.5s infinite ease-out, visibility 1.5s infinite;
+}
+
+.piece3 {
+  position: relative;
+  top: 45px;
+  left: 0px;
+  animation: move3 1.5s infinite ease-out, visibility 1.5s infinite;
+}
+
+.piece4 {
+  position: relative;
+  left: 45px;
+  animation: move4 1.5s infinite ease-out, visibility 1.5s infinite;
+}
+
+.piece6 {
+  position: relative;
+  left: 0px;
+  animation: move6 1.5s infinite ease-out, visibility 1.5s infinite;
+}
+
+.piece7 {
+  /* justify-self: flex-end; */
+  position: relative;
+  top: 0px;
+  left: 45px;
+  animation: move7 1.5s infinite ease-out, visibility 1.5s infinite;
+}
+
+.piece8 {
+  position: relative;
+  animation: move8 1.5s infinite ease-out, visibility 1.5s infinite;
+  top: 0px;
+}
+
+.piece9 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  animation: move9 1.5s infinite ease-out, visibility 1.5s infinite;
+}
+
+@keyframes visibility {
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move1 {
+  100% {
+    top: 17px;
+    left: 15px;
+  }
+}
+
+@keyframes move3 {
+  100% {
+    top: 17px;
+    left: 30px;
+  }
+}
+
+@keyframes move2 {
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes move4 {
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes move6 {
+  100% {
+    left: 45px;
+  }
+}
+
+@keyframes move7 {
+  100% {
+    top: 27px;
+    left: 15px;
+  }
+}
+
+@keyframes move8 {
+  100% {
+    top: 45px;
+  }
+}
+
+@keyframes move9 {
+  100% {
+    top: 27px;
+    left: 30px;
+  }
+}
