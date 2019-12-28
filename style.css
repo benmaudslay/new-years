@@ -13,17 +13,17 @@ body {
   height: 100vh;
   width: auto;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 section {
-  margin: 15px auto 0 auto;
+  margin: 15px auto 20px auto;
   height: 100%;
   max-width: 800px;
   width: auto;
   display: grid;
   grid-template-areas: "header" "body" "footer";
-  grid-template-rows: 150px 400px auto;
+  grid-template-rows: 150px 320px auto;
   background-color: transparent;
 }
 
